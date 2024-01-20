@@ -1,0 +1,15 @@
+{
+    "name": "phama/showerman",
+    "autoload": {
+        "psr-4": {
+            "Phama\\Showerman\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Lea",
+            "email": "leamachyleger@gmail.com"
+        }
+    ],
+    "require": {}
+}
