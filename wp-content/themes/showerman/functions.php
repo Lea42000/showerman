@@ -43,7 +43,16 @@ add_action( 'wp_enqueue_scripts', 'tokyo_advisor_register_assets' );
 
 function tokyo_advisor_enqueue_styles() {
 	// Ajouter la feuille de style
+
 	wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css', array(), '1.0', 'all' );
+	wp_enqueue_style( 'header-styles', get_template_directory_uri() . '/menu/header/header.css', array(), '1.0', 'all' );
+	wp_enqueue_style( 'footer-styles', get_template_directory_uri() . '/menu/footer/footer.css', array(), '1.0', 'all' );
+	// Home Page
+
+	wp_enqueue_style( 'HP-box-du-moment-styles', get_template_directory_uri() . '/pages/home-page/box-du-moment/box-du-moment.css', array(), '1.0', 'all' );
+	wp_enqueue_style( 'HP-concept-styles', get_template_directory_uri() . '/pages/home-page/concept/concept.css', array(), '1.0', 'all' );
+	wp_enqueue_style( 'HP-newsletter-styles', get_template_directory_uri() . '/pages/home-page/newsletter/newsletter.css', array(), '1.0', 'all' );
+	wp_enqueue_style( 'HP-contact-styles', get_template_directory_uri() . '/pages/home-page/contact/contact.css', array(), '1.0', 'all' );
 }
 
 add_action( 'wp_enqueue_scripts', 'tokyo_advisor_enqueue_styles' );
