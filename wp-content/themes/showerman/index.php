@@ -1,7 +1,5 @@
 <?php get_template_part('menu/header/header'); ?>
 
-
-
     <!-- Btn Call -->
     <div class="btn-call">
         <a href="tel:+1234567890">

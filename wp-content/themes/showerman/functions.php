@@ -61,14 +61,7 @@ function shawerman_enqueue_styles() {
 
 add_action( 'wp_enqueue_scripts', 'shawerman_enqueue_styles' );
 
-function inserer_carte() {
-	ob_start(); // Commence la capture de l'output
-	// Votre code PHP ici
-	// Par exemple, inclure votre fichier template-carte.php :
-	include(get_theme_file_path('/template-carte.php'));
-	return ob_get_clean(); // Renvoie l'output capturé et arrête la capture
-}
-add_shortcode('carte', 'inserer_carte');
+
 
 
 function shawerman_post_thumbnails() {
@@ -113,5 +106,35 @@ function add_additional_class_on_li( $classes, $item, $args ) {
 
 add_filter( 'nav_menu_css_class', 'add_additional_class_on_li', 1, 3 );
 
+function inserer_carte() {
+	ob_start(); // Commence la capture de l'output
+	// Votre code PHP ici
+	// Par exemple, inclure votre fichier template-carte.php :
+	include(get_theme_file_path('/template-carte.php'));
+	return ob_get_clean(); // Renvoie l'output capturé et arrête la capture
+}
+add_shortcode('carte', 'inserer_carte');
+
+function my_acf_init_block_types() {
+	// Vérifier si la fonction existe et l'API des blocs est disponible.
+	if( function_exists('acf_register_block_type') ) {
+
+		// Enregistrer un bloc personnalisé.
+		acf_register_block_type(array(
+			'name'              => 'cards_menu',
+			'title'             => __('Card menu'),
+			'description'       => __('Card menu'),
+			'render_template'   => 'blocks/cards.php',
+			'category'          => 'formatting',
+			'icon'              => 'admin-comments',
+			'keywords'          => array( 'custom', 'quote' ),
+			'supports'          => array(
+				'align' => false,
+			),
+		));
+	}
+}
+
+add_action('acf/init', 'my_acf_init_block_types');
 
 ?>
