@@ -1,0 +1,30 @@
+.home-contact h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    letter-spacing: -3px;
+    color: #4c4c4c;
+    font-size: 3.5rem;
+}
+
+.home-contact p {
+    color: white;
+}
+
+.home-contact iframe {
+    height: -webkit-fill-available;
+}
+
+.bouton-itineraire{
+    background: #333333;
+    border: none;
+    color: #ffffff;
+    padding: 0.5rem 2rem;
+    font-weight: bold;
+    border-radius: 21px
+}
+
+.bouton-itineraire:hover {
+    background: white;
+    transition: 0.5s;
+    color: #333;
+}

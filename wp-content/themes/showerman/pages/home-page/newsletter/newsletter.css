@@ -1,0 +1,48 @@
+.newsletter input[type="submit"] {
+    background: #333333;
+    border: none;
+    color: #ffffff;
+    padding: 0.5rem 2rem;
+    font-weight: bold;
+    border-radius: 21px;
+}
+
+.newsletter p {
+    color: white;
+}
+
+.newsletter form {
+    display: table-caption;
+}
+
+.newsletter input[type="email"] {
+    border: none;
+    width: 330px;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+}
+
+.newsletter input[type="submit"] {
+    background: #333333;
+    border: none;
+    color: #ffffff;
+    padding: 0.5rem 2rem;
+    font-weight: bold;
+}
+
+.newsletter input[type="submit"]:hover {
+    background: white;
+    transition: 0.5s;
+    color: #333;
+}
+
+.bg-image-news {
+    height: 40vh;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+}
+
+.mc4wp-alert.mc4wp-notice {
+    font-size: 13px;
+}

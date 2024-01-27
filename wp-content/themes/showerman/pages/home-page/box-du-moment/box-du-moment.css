@@ -1,0 +1,54 @@
+.box-du-moment {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.box-du-moment img {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.box-du-moment h2 {
+    text-align: center;
+    font-size: 3.5rem;
+    border-bottom: solid #f3d84a 4px;
+    width: max-content;
+    margin: auto;
+    color: #4c4c4c;
+}
+
+.box-du-moment h3 {
+    letter-spacing: -2px;
+    color: #4c4c4c;
+    text-transform: uppercase;
+    font-size: 2rem;
+    z-index: 3;
+    position: relative;
+}
+
+.box-du-moment p {
+    margin: 0;
+    color: #4c4c4c;
+    z-index: 4;
+}
+
+.coup-de-coeur img {
+    width: 40px;
+}
+
+.coup-de-coeur {
+    position: absolute;
+    top: 1%;
+    right: 10%;
+}
+
+.num-1 {
+    position: absolute;
+    color: white !important;
+    font-size: 12px;
+    top: 9px;
+    left: 11px;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+}
