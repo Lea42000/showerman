@@ -22,31 +22,35 @@ function theme_prefix_setup() {
 add_action( 'after_setup_theme', 'theme_prefix_setup' );
 
 
-function tokyo_advisor_register_assets() {
+function shawerman_register_assets() {
 	//wp_deregister_script('jquery');
-	wp_register_script( 'jquery', 'https://code.jquery.com/jquery-3.2.1.slim.min.js', [], false, true );
+	wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js', [], false, true );
 	wp_register_style( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', [] );
 	wp_register_script( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', [
 		'popper',
 		'jquery'
 	], false, true );
 	wp_register_script( 'popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', [], false, true );
+	wp_enqueue_script('aos', 'https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js', array(), null, true);
+	wp_enqueue_script('slick-carousel', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js', array('jquery'), null, true);
+	wp_enqueue_script('swiper', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js', array('jquery'), null, true);
+	wp_enqueue_script('gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js', array('jquery'), null, true);
 	wp_enqueue_style( 'bootstrap' );
 	wp_enqueue_style( 'style' );
 	wp_enqueue_script( 'bootstrap' );
-	wp_enqueue_script( 'main' );
+	wp_enqueue_script('main', get_template_directory_uri() . '/main.js', array('jquery', 'aos', 'slick-carousel', 'swiper', 'gsap'), null, true);
 
 }
 
-add_action( 'wp_enqueue_scripts', 'tokyo_advisor_register_assets' );
+add_action( 'wp_enqueue_scripts', 'shawerman_register_assets' );
 
 
-function tokyo_advisor_enqueue_styles() {
+function shawerman_enqueue_styles() {
 	// Ajouter la feuille de style
 	wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css', array(), '1.0', 'all' );
 }
 
-add_action( 'wp_enqueue_scripts', 'tokyo_advisor_enqueue_styles' );
+add_action( 'wp_enqueue_scripts', 'shawerman_enqueue_styles' );
 
 function inserer_carte() {
 	ob_start(); // Commence la capture de l'output
@@ -58,11 +62,11 @@ function inserer_carte() {
 add_shortcode('carte', 'inserer_carte');
 
 
-function tokyo_advisor_post_thumbnails() {
+function shawerman_post_thumbnails() {
 	add_theme_support( 'post-thumbnails' );
 }
 
-add_action( 'after_setup_theme', 'tokyo_advisor_post_thumbnails' );
+add_action( 'after_setup_theme', 'shawerman_post_thumbnails' );
 
 function my_custom_theme_setup() {
 	add_theme_support( 'menus' );

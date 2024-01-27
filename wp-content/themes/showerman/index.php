@@ -8,7 +8,6 @@ if ( have_posts() ) :
 	endwhile;
 endif;
 ?>
-
     <!-- Btn Call -->
     <div class="btn-call">
         <a href="tel:+1234567890">
@@ -184,7 +183,7 @@ if ( is_front_page() ) {
 						echo '<h2 class="pb-3">' . esc_html( $titre ) . '</h2>';
 					}
 
-                    // TODO corriger le bouton itineraire
+					// TODO corriger le bouton itineraire
 					// Récupérer l'URL du bouton itinéraire
 					$bouton_itineraire = get_field( 'bouton_itiniraire' );
 					if ( $bouton_itineraire ) {

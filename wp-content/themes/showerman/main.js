@@ -1,14 +1,39 @@
-document.addEventListener('DOMContentLoaded', function() {
-    var bgImage = document.querySelector('.bg-image');
-    bgImage.addEventListener('mousemove', function(e) {
-        var width = bgImage.offsetWidth;
-        var height = bgImage.offsetHeight;
-        var mouseX = e.offsetX;
-        var mouseY = e.offsetY;
+jQuery(document).ready(function($) {
 
-        var bgPosX = (mouseX / width * 100);
-        var bgPosY = (mouseY / height * 100);
+    var loadingTime = 5000; // Temps en millisecondes pour que le préchargeur atteigne 100%
+    var currentPercentage = 50;
+    var loadingPercentageElement = document.getElementById('loading-percentage');
 
-        bgImage.style.backgroundPosition = bgPosX + '% ' + bgPosY + '%';
-    });
+    var interval = setInterval(function() {
+        currentPercentage++;
+        loadingPercentageElement.textContent = currentPercentage + '%';
+
+        if (currentPercentage >= 100) {
+            clearInterval(interval);
+            hidePreloader();
+        }
+    }, loadingTime / 100); // Divisez le temps total par 100 pour obtenir le temps d'incrément par 1%
+
+    // Fonction pour masquer le préchargeur
+    function hidePreloader() {
+        var preloader = document.getElementById('preloader');
+        if (preloader) {
+            preloader.style.opacity = '0';
+            preloader.style.transform = 'translateY(-100%)';
+            preloader.addEventListener('transitionend', function() {
+                preloader.remove(); // Retirer le préchargeur du DOM
+            });
+        }
+    }
+
+    // Si la page est déjà chargée, masquez le préchargeur immédiatement
+    if (document.readyState === "complete") {
+        clearInterval(interval);
+        hidePreloader();
+    } else {
+        window.addEventListener('load', function() {
+            clearInterval(interval); // Arrête le calcul du pourcentage une fois la page chargée
+            setTimeout(hidePreloader, 500); // Un court délai avant de masquer le préchargeur
+        });
+    }
 });

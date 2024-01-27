@@ -13,6 +13,13 @@
   <component name="PhpIncludePathManager">
     <include_path>
       <path value="" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/wp-content/plugins/weglot/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/wp-content/plugins/weglot/vendor/gmulti/morphism-php" />
+      <path value="$PROJECT_DIR$/wp-content/plugins/weglot/vendor/weglot/simplehtmldom" />
+      <path value="$PROJECT_DIR$/wp-content/plugins/weglot/vendor/weglot/translation-definitions" />
+      <path value="$PROJECT_DIR$/wp-content/plugins/weglot/vendor/composer" />
+      <path value="$PROJECT_DIR$/wp-content/plugins/weglot/vendor/weglot/weglot-php" />
     </include_path>
   </component>
   <component name="PhpInterpreters">
@@ -106,6 +113,11 @@
   </component>
   <component name="PhpStanOptionsConfiguration">
     <option name="transferred" value="true" />
+  </component>
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/wp-content/plugins/weglot/vendor/autoload.php" />
+    </phpunit_settings>
   </component>
   <component name="PsalmOptionsConfiguration">
     <option name="transferred" value="true" />

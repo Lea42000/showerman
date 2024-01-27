@@ -2,7 +2,16 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/wp-includes" isTestSource="false" packagePrefix="PHPMailer" />
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" packagePrefix="Phama\Showerman\" />
+      <sourceFolder url="file://$MODULE_DIR$/wp-content/plugins/weglot/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/wp-includes/sodium_compat/tests" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/weglot/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/weglot/vendor/gmulti/morphism-php" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/weglot/vendor/psr/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/weglot/vendor/weglot/simplehtmldom" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/weglot/vendor/weglot/translation-definitions" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/weglot/vendor/weglot/weglot-php" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

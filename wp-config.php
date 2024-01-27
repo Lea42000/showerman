@@ -36,9 +36,9 @@ define( 'DB_HOST', 'localhost' );
 define( 'DB_CHARSET', 'utf8mb4' );
 
 /** Type de collation de la base de données.
-  * N’y touchez que si vous savez ce que vous faites.
-  */
-define('DB_COLLATE', '');
+ * N’y touchez que si vous savez ce que vous faites.
+ */
+define( 'DB_COLLATE', '' );
 
 /**#@+
  * Clés uniques d’authentification et salage.
@@ -51,14 +51,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'tIL2 3~`57sdV@#2XG0]hh-jmRvDtWH4A_RJ|RCk<g6!Q=N!V?YAJE?S!3Q%f&BA' );
-define( 'SECURE_AUTH_KEY',  ')Pd6 LezV*7ylmN:8>:[YwbL)E__Me{ve+?4CBcavx!neXjjS&?f55WP65;Dv:-Z' );
-define( 'LOGGED_IN_KEY',    '2pVcnZwQojkgVAeQ<:qU3YcbLY9oa8l)]xifCZ%+`$,Z-q+v!x9>I]w[tx]s[n()' );
-define( 'NONCE_KEY',        'vPF=df<f>dGpyM3]zaeTZhB8.!QTdD{g:OLo{sD8F#9+.0ulZIV.WLWp3k!7u>hO' );
-define( 'AUTH_SALT',        '@XseU,W<USCA,~n5N.~4xYt>t#| =2d%<GAhOvvmkrDAuW:+R.@w^/Lh3}i5 =1O' );
+define( 'AUTH_KEY', 'tIL2 3~`57sdV@#2XG0]hh-jmRvDtWH4A_RJ|RCk<g6!Q=N!V?YAJE?S!3Q%f&BA' );
+define( 'SECURE_AUTH_KEY', ')Pd6 LezV*7ylmN:8>:[YwbL)E__Me{ve+?4CBcavx!neXjjS&?f55WP65;Dv:-Z' );
+define( 'LOGGED_IN_KEY', '2pVcnZwQojkgVAeQ<:qU3YcbLY9oa8l)]xifCZ%+`$,Z-q+v!x9>I]w[tx]s[n()' );
+define( 'NONCE_KEY', 'vPF=df<f>dGpyM3]zaeTZhB8.!QTdD{g:OLo{sD8F#9+.0ulZIV.WLWp3k!7u>hO' );
+define( 'AUTH_SALT', '@XseU,W<USCA,~n5N.~4xYt>t#| =2d%<GAhOvvmkrDAuW:+R.@w^/Lh3}i5 =1O' );
 define( 'SECURE_AUTH_SALT', 'l<K4Cc_WvNvO3pm@35ZH~)b2iw~dQEQ^YjiK8Hl 0z*(6S[R0F?v^}^%yr]dJz4q' );
-define( 'LOGGED_IN_SALT',   '><qkYs{@o+hO,uM>Yv{dQ8mU1,s,RN&[U.y92A6Vij8A:izp+=i.Bz7}{u*[;zDH' );
-define( 'NONCE_SALT',       'mKm=3HEs4l_&4pS__IXrni4AL>4Q3pmsa`P1A]NT U?7Kx`Bj.S`qt[&gXz=%1ko' );
+define( 'LOGGED_IN_SALT', '><qkYs{@o+hO,uM>Yv{dQ8mU1,s,RN&[U.y92A6Vij8A:izp+=i.Bz7}{u*[;zDH' );
+define( 'NONCE_SALT', 'mKm=3HEs4l_&4pS__IXrni4AL>4Q3pmsa`P1A]NT U?7Kx`Bj.S`qt[&gXz=%1ko' );
 /**#@-*/
 
 /**
@@ -84,13 +84,14 @@ $table_prefix = 'wp_';
  *
  * @link https://fr.wordpress.org/support/article/debugging-in-wordpress/
  */
-define('WP_DEBUG', false);
+define( 'WP_DEBUG', false );
 
 /* C’est tout, ne touchez pas à ce qui suit ! Bonne publication. */
 
 /** Chemin absolu vers le dossier de WordPress. */
-if ( !defined('ABSPATH') )
-	define('ABSPATH', dirname(__FILE__) . '/');
+if ( ! defined( 'ABSPATH' ) ) {
+	define( 'ABSPATH', dirname( __FILE__ ) . '/' );
+}
 
 /** Réglage des variables de WordPress et de ses fichiers inclus. */
-require_once(ABSPATH . 'wp-settings.php');
+require_once( ABSPATH . 'wp-settings.php' );
