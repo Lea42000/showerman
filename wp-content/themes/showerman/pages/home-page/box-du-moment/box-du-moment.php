@@ -52,3 +52,50 @@
         </div>
     </section>
 <?php } ?>
+
+<?php if (is_front_page() && function_exists('get_field')): ?>
+    <div id="carouselExampleControls" class="carousel slide box-moment-mobile" data-ride="carousel">
+        <h2> Nos Boxs du Moment </h2>
+        <div class="carousel-inner">
+			<?php
+			$first = true;
+			if (have_rows('box_du_moment')) {
+				while (have_rows('box_du_moment')) {
+					the_row();
+					$image = get_sub_field('image');
+					$titre = get_sub_field('titre');
+					$texte = get_sub_field('texte');
+					$coup_de_coeur = get_sub_field('coup_de_coeur');
+					$item_class = $first ? 'carousel-item active' : 'carousel-item';
+					?>
+                    <div class="<?php echo $item_class; ?>">
+						<?php if ($image): ?>
+                            <img class="d-block w-100" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
+						<?php endif; ?>
+                        <div class="">
+							<?php if ($titre): ?>
+                                <h3><?php echo esc_html($titre); ?></h3>
+							<?php endif; ?>
+							<?php if ($texte): ?>
+                                <p><?php echo esc_html($texte); ?></p>
+							<?php endif; ?>
+                        </div>
+                    </div>
+					<?php
+					$first = false;
+				}
+			}
+			?>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+<?php endif; ?>
+
+

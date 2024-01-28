@@ -38,7 +38,7 @@ function shawerman_register_assets() {
 	wp_enqueue_style( 'bootstrap' );
 	wp_enqueue_style( 'style' );
 	wp_enqueue_script( 'bootstrap' );
-	wp_enqueue_script('main', get_template_directory_uri() . '/main.js', array('jquery', 'aos', 'slick-carousel', 'swiper', 'gsap'), null, true);
+	wp_enqueue_script('main', get_template_directory_uri() . '/main.js', array('jquery'), null, true);
 
 }
 

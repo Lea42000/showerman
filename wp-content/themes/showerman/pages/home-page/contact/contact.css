@@ -14,8 +14,8 @@
     height: -webkit-fill-available;
 }
 
-.bouton-itineraire{
-    background: #333333;
+.bouton-itineraire {
+    background: #6a6a6a;
     border: none;
     color: #ffffff;
     padding: 0.5rem 2rem;
@@ -27,4 +27,30 @@
     background: white;
     transition: 0.5s;
     color: #333;
+}
+
+.horaires br {
+    display: none;
+}
+
+.horaires p {
+    margin-bottom: unset  !important;
+}
+
+.horaires {
+    margin-bottom: 3rem;
+}
+
+@media only screen and (max-width: 800px) {
+    .home-contact iframe {
+        height: 490px;
+    }
+
+    .horaires {
+        margin-top: 2rem;
+    }
+
+    .home-contact {
+        text-align: center;
+    }
 }

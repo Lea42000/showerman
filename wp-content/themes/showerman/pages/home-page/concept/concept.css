@@ -4,8 +4,20 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .concept p {
     color: white;
+}
+
+@media only screen and (max-width: 750px) {
+
+    .concept .bg-image{
+        display: none;
+    }
+
+    .concept {
+        background: #6a6a6a !important;
+    }
 }

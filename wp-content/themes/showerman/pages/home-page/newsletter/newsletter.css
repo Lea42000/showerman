@@ -23,7 +23,7 @@
 }
 
 .newsletter input[type="submit"] {
-    background: #333333;
+    background: #6a6a6a;
     border: none;
     color: #ffffff;
     padding: 0.5rem 2rem;
@@ -37,12 +37,19 @@
 }
 
 .bg-image-news {
-    height: 40vh;
+    height: 100vh;
     background-position: center;
     background-size: cover;
     width: 100%;
+    background-attachment: fixed;
 }
 
 .mc4wp-alert.mc4wp-notice {
     font-size: 13px;
+}
+
+@media only screen and (max-width: 750px) {
+    .col-6.bg-image-news {
+        display: none;
+    }
 }

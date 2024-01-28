@@ -24,19 +24,7 @@
 
 							// Afficher les images si elles existent
 							if ( $image_1 ) :
-								echo '<div class="col-6 bg-image-news" style="background-image: url(\'' . esc_url( $image_1['url'] ) . '\')"></div>';
-							endif;
-
-							if ( $image_2 ) :
-								echo '<div class="col-6 bg-image-news" style="background-image: url(\'' . esc_url( $image_2['url'] ) . '\')"></div>';
-							endif;
-
-							if ( $image_3 ) :
-								echo '<div class="col-6 bg-image-news" style="background-image: url(\'' . esc_url( $image_3['url'] ) . '\')"></div>';
-							endif;
-
-							if ( $image_4 ) :
-								echo '<div class="col-6 bg-image-news" style="background-image: url(\'' . esc_url( $image_4['url'] ) . '\')"></div>';
+								echo '<div class="col-12 bg-image-news" style="background-image: url(\'' . esc_url( $image_1['url'] ) . '\')"></div>';
 							endif;
 
 						endwhile;

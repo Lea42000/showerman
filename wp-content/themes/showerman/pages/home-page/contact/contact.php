@@ -19,17 +19,15 @@
 						echo '<h2 class="pb-3">' . esc_html( $titre ) . '</h2>';
 					}
 
-                    // TODO corriger le bouton itineraire
-					// Récupérer l'URL du bouton itinéraire
-					$bouton_itineraire = get_field( 'bouton_itiniraire' );
-					if ( $bouton_itineraire ) {
-						echo '<a href="' . esc_url( $bouton_itineraire ) . '" class="bouton-itineraire">Itinéraire</a>';
-					}
-
 					// Récupérer les horaires
 					$horaires = get_field( 'horaires' );
 					if ( $horaires ) {
 						echo '<div class="horaires"><p>' . nl2br( ( $horaires ) ) . '</p></div>';
+					}
+
+					$bouton_itineraire = get_field( 'bouton_itiniraire' );
+					if ( $bouton_itineraire ) {
+						echo '<a href="' . esc_url( $bouton_itineraire ) . '" class="bouton-itineraire">Itinéraire</a>';
 					}
 
 					?>

@@ -1,10 +1,10 @@
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
 
     var loadingTime = 5000; // Temps en millisecondes pour que le préchargeur atteigne 100%
     var currentPercentage = 50;
     var loadingPercentageElement = document.getElementById('loading-percentage');
 
-    var interval = setInterval(function() {
+    var interval = setInterval(function () {
         currentPercentage++;
         loadingPercentageElement.textContent = currentPercentage + '%';
 
@@ -20,7 +20,7 @@ jQuery(document).ready(function($) {
         if (preloader) {
             preloader.style.opacity = '0';
             preloader.style.transform = 'translateY(-100%)';
-            preloader.addEventListener('transitionend', function() {
+            preloader.addEventListener('transitionend', function () {
                 preloader.remove(); // Retirer le préchargeur du DOM
             });
         }
@@ -31,9 +31,13 @@ jQuery(document).ready(function($) {
         clearInterval(interval);
         hidePreloader();
     } else {
-        window.addEventListener('load', function() {
+        $(window).on('load', function () {
             clearInterval(interval); // Arrête le calcul du pourcentage une fois la page chargée
             setTimeout(hidePreloader, 500); // Un court délai avant de masquer le préchargeur
         });
     }
+
 });
+
+
+

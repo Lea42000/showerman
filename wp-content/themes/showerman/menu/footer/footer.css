@@ -1,3 +1,12 @@
 footer p {
     font-size: 12px;
 }
+
+@media only screen and (max-width: 750px) {
+
+    footer img {
+        width: 205px;
+        padding: 2rem 0rem;
+    }
+
+}
