@@ -20,7 +20,7 @@
                             $texte = get_sub_field('texte');
                             $coup_de_coeur = get_sub_field('coup_de_coeur');
                             ?>
-                            <div class="col-lg-4 col-xl-4 col-xs-6 mb-5">
+                            <div class="col-lg-4 col-xl-4 col-xs-6 mb-5" data-aos="fade-up">
                                 <?php
                                 // Affichez l'image.
                                 if ($image) {
@@ -55,7 +55,7 @@
 
 <?php if (is_front_page() && function_exists('get_field')): ?>
     <div id="carouselExampleControls" class="carousel slide box-moment-mobile" data-ride="carousel">
-        <h2> Nos Boxs du Moment </h2>
+        <h2 data-aos="fade-up"> Nos Boxs du Moment </h2>
         <div class="carousel-inner">
 			<?php
 			$first = true;

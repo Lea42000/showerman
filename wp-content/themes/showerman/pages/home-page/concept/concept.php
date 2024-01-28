@@ -29,12 +29,12 @@ endif;
                 <?php
                 // Affiche le titre si celui-ci est défini.
                 if ($titre) {
-                    echo '<h2>' . ($titre) . '</h2>';
+                    echo '<h2 data-aos="fade-up">' . ($titre) . '</h2>';
                 }
 
                 // Affiche le texte si celui-ci est défini.
                 if ($texte) {
-                    echo '<div>' . ($texte) . '</div>';
+                    echo '<div data-aos="fade-up">' . ($texte) . '</div>';
                 }
                 ?>
             </div>

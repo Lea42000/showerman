@@ -16,18 +16,18 @@
 					// Récupérer le titre
 					$titre = get_field( 'titre' );
 					if ( $titre ) {
-						echo '<h2 class="pb-3">' . esc_html( $titre ) . '</h2>';
+						echo '<h2 data-aos="fade-up" class="pb-3">' . esc_html( $titre ) . '</h2>';
 					}
 
 					// Récupérer les horaires
 					$horaires = get_field( 'horaires' );
 					if ( $horaires ) {
-						echo '<div class="horaires"><p>' . nl2br( ( $horaires ) ) . '</p></div>';
+						echo '<div data-aos="fade-up" class="horaires"><p>' . nl2br( ( $horaires ) ) . '</p></div>';
 					}
 
 					$bouton_itineraire = get_field( 'bouton_itiniraire' );
 					if ( $bouton_itineraire ) {
-						echo '<a href="' . esc_url( $bouton_itineraire ) . '" class="bouton-itineraire">Itinéraire</a>';
+						echo '<a data-aos="fade-up" href="' . esc_url( $bouton_itineraire ) . '" class="bouton-itineraire">Itinéraire</a>';
 					}
 
 					?>

@@ -34,7 +34,7 @@
             <source src="<?php echo get_template_directory_uri(); ?>/assets/images/video-home.mp4" type="video/mp4">
         </video>
         <div class="overlay-text">
-            <h1>Shawer<span class="yellow-color">man</span></h1>
+            <h1 data-aos="fade-up">Shawer<span class="yellow-color">man</span></h1>
             <p>Bienvenue à Shawer<span class="yellow-color">man</span> Lyon 3.<br>Cuisine authentique de style maison
                 préparée avec des ingrédients frais tous les jours.</p>
             <button class="btn-book">Reserver</button>

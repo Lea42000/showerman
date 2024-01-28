@@ -48,6 +48,8 @@ add_action( 'wp_enqueue_scripts', 'shawerman_register_assets' );
 function shawerman_enqueue_styles() {
 	// Ajouter la feuille de style
 
+	wp_enqueue_script('aos', 'https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js', [], null, true);
+	wp_enqueue_style('aos', 'https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css', [], null, 'all');
 	wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css', array(), '1.0', 'all' );
 	wp_enqueue_style( 'header-styles', get_template_directory_uri() . '/menu/header/header.css', array(), '1.0', 'all' );
 	wp_enqueue_style( 'footer-styles', get_template_directory_uri() . '/menu/footer/footer.css', array(), '1.0', 'all' );

@@ -37,6 +37,16 @@ jQuery(document).ready(function ($) {
         });
     }
 
+    AOS.init({
+        offset: 200, // décalage (en px) de l'élément déclencheur original
+        delay: 100, // valeurs de retard en millisecondes
+        duration: 400, // valeurs de la durée de l'animation en millisecondes
+        easing: 'ease', // animation par défaut easing
+        once: false, // animation seulement une fois - lors du défilement vers le bas
+        mirror: true, // si les éléments doivent s'animer lors du défilement passé
+        anchorPlacement: 'top-bottom', // définit quelle position de l'élément par rapport à la fenêtre
+    });
+
 });
 
 
