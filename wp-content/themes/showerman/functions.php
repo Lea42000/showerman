@@ -17,6 +17,8 @@ function theme_prefix_setup() {
 		'width'      => 400,
 		'flex-width' => true,
 	) );
+	add_theme_support( 'header-footer-elementor' );
+
 }
 
 add_action( 'after_setup_theme', 'theme_prefix_setup' );

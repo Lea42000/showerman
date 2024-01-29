@@ -2,11 +2,26 @@ footer p {
     font-size: 12px;
 }
 
-@media only screen and (max-width: 750px) {
+/* @media only screen and (max-width: 750px) {
 
     footer img {
         width: 205px;
         padding: 2rem 0rem;
     }
 
+} */
+
+.custom-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+}
+
+.custom-logo {
+    max-height: 55px;
+}
+
+.text-center-v {
+    margin-top: 15px;
 }
