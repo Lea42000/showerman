@@ -20,7 +20,7 @@
 
     <section class="video-home">
         <video autoplay loop muted playsinline class="background-video">
-            <source src="<?php echo get_template_directory_uri(); ?>/assets/images/video-home.mp4" type="video/mp4">
+            <source src="<?php echo get_template_directory_uri(); ?>/assets/images/new_video.mp4" type="video/mp4">
         </video>
         <div class="overlay-text">
             <h1 data-aos="fade-up">Shawer<span class="yellow-color">man</span></h1>
