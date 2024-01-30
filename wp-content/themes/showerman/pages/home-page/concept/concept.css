@@ -7,6 +7,27 @@
     background-attachment: fixed;
 }
 
+.text-on-picture{
+    position: absolute;
+    height: -webkit-fill-available;
+    top: 0;
+    z-index: 4;
+    background: #e4e4e44a;
+    left: 25%;
+    right: 50%;
+    text-align: center;
+}
+
+.text-on-picture p{
+    color: white;
+    text-shadow: 2px 2px 8px #454545;
+}
+
+.text-on-picture h2{
+    color: white !important;
+    text-shadow: 2px 2px 8px #454545;
+}
+
 .concept p {
     color: white;
 }
@@ -19,5 +40,19 @@
 
     .concept {
         background: #6a6a6a !important;
+    }
+
+    .text-on-picture {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .concept {
+        display: none !important;
+    }
+
+    .text-on-picture {
+        display: none;
     }
 }
