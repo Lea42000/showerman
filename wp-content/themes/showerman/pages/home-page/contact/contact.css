@@ -6,8 +6,8 @@
     font-size: 3.5rem;
 }
 
-.home-contact p {
-    color: white;
+.home-contact{
+    text-align: center;
 }
 
 .home-contact iframe {

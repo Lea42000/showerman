@@ -11,26 +11,28 @@
                             width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                <div class="col-lg-6 col-xl-6 col-xs-12 bg-yellow p-5">
+                <div class="col-lg-6 col-xl-6 col-xs-12 p-5 bg-light-yellow">
+                    <div data-aos="fade-up">
 					<?php
 					// Récupérer le titre
 					$titre = get_field( 'titre' );
 					if ( $titre ) {
-						echo '<h2 data-aos="fade-up" class="pb-3">' . esc_html( $titre ) . '</h2>';
+						echo '<h2 class="pb-3 color-grey">' . esc_html( $titre ) . '</h2>';
 					}
 
 					// Récupérer les horaires
 					$horaires = get_field( 'horaires' );
 					if ( $horaires ) {
-						echo '<div data-aos="fade-up" class="horaires"><p>' . nl2br( ( $horaires ) ) . '</p></div>';
+						echo '<div class="horaires color-grey"><p>' . nl2br( ( $horaires ) ) . '</p></div>';
 					}
 
 					$bouton_itineraire = get_field( 'bouton_itiniraire' );
 					if ( $bouton_itineraire ) {
-						echo '<a data-aos="fade-up" href="' . esc_url( $bouton_itineraire ) . '" class="bouton-itineraire">Itinéraire</a>';
+						echo '<a href="' . esc_url( $bouton_itineraire ) . '" class="bouton-itineraire">Itinéraire</a>';
 					}
 
 					?>
+                    </div>
                 </div>
 
 			<?php

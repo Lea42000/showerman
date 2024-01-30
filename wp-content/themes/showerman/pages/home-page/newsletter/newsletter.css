@@ -12,12 +12,13 @@
 }
 
 .newsletter form {
-    display: table-caption;
+    display: block;
+    margin: auto;
 }
 
 .newsletter input[type="email"] {
     border: none;
-    width: 330px;
+    width: 490px;
     padding: 0.5rem 1rem;
     border-radius: 2rem;
 }
@@ -48,6 +49,10 @@
     font-size: 13px;
 }
 
+.newsletter{
+    text-align: center;
+}
+
 @media only screen and (max-width: 750px) {
     .col-6.bg-image-news {
         display: none;
@@ -55,5 +60,12 @@
 
     .bg-image-news{
         display: none;
+    }
+
+    .newsletter input[type="email"] {
+        border: none;
+        width: 320px !important;
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
     }
 }

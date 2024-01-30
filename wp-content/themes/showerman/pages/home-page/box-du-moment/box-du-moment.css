@@ -64,7 +64,6 @@
 
     .box-moment-mobile{
         display: block;
-        background: #F9D70C;
         padding: 1rem;
         text-align: center;
     }
@@ -75,11 +74,10 @@
 
     .carousel-item h3 {
         font-size: 2.5rem;
-        color: white;
     }
 
-    .carousel-item p, a {
-        color: #ffffff;
+    .box-moment-mobile h2{
+        color: #6a6a6a;
     }
 
     .box-du-moment{
@@ -99,7 +97,6 @@
         z-index: 10;
         padding-top: 0px;
         padding-bottom: 20px;
-        color: #6a6a6a;
         text-align: center;
         transform: translate(10px, 60px);
     }
