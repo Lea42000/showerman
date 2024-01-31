@@ -6,27 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,600&family=Noto+Sans+JP:wght@100;400;600;700&display=swap"
-          rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,600&family=Noto+Sans+JP:wght@100;400;600;700&display=swap"
+        rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Rubik:wght@300;400&display=swap"
-          rel="stylesheet">
-	<?php wp_head() ?>
+        rel="stylesheet">
+    <?php wp_head() ?>
 </head>
 
 <header class="header">
-	<?php
+    <header class="custom-header">
+        <div class="logo">
+            <a href="http://localhost:8888/">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/new_logo.png" alt="logo">
+            </a>
+        </div>
+        <div class="main-navbar">
+            <a href="https://usellweb.co/fr/landingpage/shawerman-lyon-3">Commander</a>
+            <a href="https://shawerman.fr/fr/booking">Réserver</a>
+            <a href="#link2">Contact</a>
+        </div>
+        <nav class="header-nav">
+            <?php wp_nav_menu(array('theme_location' => 'primary', 'menu_id' => 'primary-menu')); ?>
+        </nav>
 
-	if ( has_nav_menu( 'primary' ) ) {
-
-		wp_nav_menu( array(
-			'theme_location' => 'primary',
-			'add_li_class'   => 'my-custom-li-class',
-		) );
-	}
-
-	?>
+    </header>
 
 
     <section class="video-home">

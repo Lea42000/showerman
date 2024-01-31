@@ -52,7 +52,7 @@ h2 {
 Menu
 ***/
 
-.menu-primary-container {
+/* .menu-primary-container {
     position: fixed;
     width: 100%;
     z-index: 10;
@@ -60,9 +60,9 @@ Menu
     padding: 1rem 0;
     -webkit-box-shadow: 5px 5px 15px 5px #A4A4A4;
     box-shadow: 5px 5px 15px 5px #00000030;
-}
+} */
 
-ul#menu-primary {
+/* ul#menu-primary {
     display: inline-flex;
     width: 100%;
     list-style: none;
@@ -78,7 +78,7 @@ ul#menu-primary li {
 ul#menu-primary li a {
     color: #2e2e2e;
     font-weight: bold;
-}
+} */
 
 .btn-call {
     position: fixed;
