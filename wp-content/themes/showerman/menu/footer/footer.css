@@ -21,3 +21,7 @@ footer p {
     text-align: center;
     padding: 5px;
 }
+
+.bg-dgrey {
+    background-color: #292929;
+}

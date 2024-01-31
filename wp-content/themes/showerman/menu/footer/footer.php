@@ -1,6 +1,6 @@
 </div>
 </div>
-<footer class="bg-grey color-white">
+<footer class="bg-dgrey color-white">
     <div class="custom-row">
         <div class="column">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/only_logo.png" alt="Shawerman"
