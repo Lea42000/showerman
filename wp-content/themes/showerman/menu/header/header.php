@@ -17,7 +17,7 @@
 </head>
 
 <header class="header">
-    <header class="custom-header">
+    <header class="custom-header" id="header">
         <div class="logo">
             <a href="http://localhost:8888/">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/new_logo.png" alt="logo">
