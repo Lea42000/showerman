@@ -53,3 +53,50 @@ video.background-video {
     background: #F9D70C;
     transition: 0.5s;
 }
+
+.custom-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* background-color: rgba(0, 0, 0, 0.1); */
+    /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+.custom-header.dark {
+    background-color: white;
+}
+
+.logo img {
+    max-width: 75px;
+}
+
+.header ul {
+	list-style: none;
+    font-size: 17px;
+    padding: 0;
+    margin: 0;
+    padding-left: 20px;
+}
+
+.header ul li a {
+    color: white;
+}
+
+.main-navbar a {
+    color: white;
+    margin-left: 20px;
+}
+
+.dark {
+    color: black !important;
+}
+
+.main-navbar {
+    margin-left: auto;
+}
