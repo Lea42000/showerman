@@ -29,7 +29,7 @@
 
                                 // Affichez le titre.
                                 if ($titre) {
-                                    echo '<h3>' . esc_html($titre) . '</h3>';
+                                    echo '<h3 class="title">' . esc_html($titre) . '</h3>';
                                 }
 
                                 // Affichez le texte.

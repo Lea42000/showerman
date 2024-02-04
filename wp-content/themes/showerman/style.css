@@ -17,7 +17,16 @@ h1, h2 {
 
 h2 {
     color: white;
+    font-size: 4.5rem;
+}
+
+h2.wp-block-heading {
+    color: #6a6a6a;
+    border-bottom: solid #f3d84b 7px;
+    width: max-content;
+    margin: auto;
     font-size: 3.5rem;
+    margin-bottom: 3rem;
 }
 
 h3 {
@@ -114,4 +123,8 @@ ul#menu-primary li a {
         color: white;
         font-size: 2.5rem;
     }
+}
+
+aside.country-selector.weglot-inline.weglot-default.wg-.weglot-invert {
+    display: none;
 }

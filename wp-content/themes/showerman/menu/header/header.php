@@ -19,18 +19,23 @@
 <header class="header">
     <header class="custom-header" id="header">
         <div class="logo">
-            <a href="http://localhost:8888/">
+            <a href="<?php echo home_url(); ?>">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/new_logo.png" alt="logo">
             </a>
         </div>
         <div class="main-navbar">
-            <a href="https://usellweb.co/fr/landingpage/shawerman-lyon-3">Commander</a>
-            <a href="https://shawerman.fr/fr/booking">Réserver</a>
-            <a href="#link2">Contact</a>
+            <div class="close-menu">&#10005;</div>
+	        <?php wp_nav_menu(array('theme_location' => 'primary', 'menu_id' => 'primary-menu')); ?>
+            <a class="order-menu" href="https://usellweb.co/fr/landingpage/shawerman-lyon-3" target="_blank">Commander</a>
         </div>
-        <nav class="header-nav">
-            <?php wp_nav_menu(array('theme_location' => 'primary', 'menu_id' => 'primary-menu')); ?>
-        </nav>
+        <div class="burger-menu">
+            <div class="burger-icon">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
 
     </header>
 
@@ -43,7 +48,7 @@
             <h1 data-aos="fade-up">Shawer<span class="yellow-color">man</span></h1>
             <p>Bienvenue à Shawer<span class="yellow-color">man</span> Lyon 3.<br>Cuisine authentique de style maison
                 préparée avec des ingrédients frais tous les jours.</p>
-            <button class="btn-book">Reserver</button>
+            <button class="btn-book"><a href="https://usellweb.co/fr/landingpage/shawerman-lyon-3" class="color-white" target="_blank">Commander</a></button>
         </div>
     </section>
 

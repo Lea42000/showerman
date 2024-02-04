@@ -12,20 +12,21 @@
     height: -webkit-fill-available;
     top: 0;
     z-index: 4;
-    background: #e4e4e44a;
+    background: #00000061;
     left: 25%;
     right: 50%;
     text-align: center;
+    width: 100%;
 }
 
 .text-on-picture p{
     color: white;
-    text-shadow: 2px 2px 8px #454545;
 }
 
 .text-on-picture h2{
     color: white !important;
-    text-shadow: 2px 2px 8px #454545;
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
 }
 
 .concept p {

@@ -49,5 +49,17 @@ jQuery(document).ready(function ($) {
 
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const burger = document.querySelector('.burger-menu .burger-icon');
+    const menu = document.querySelector('.main-navbar');
+    const closeMenu = document.querySelector('.close-menu'); // Sélectionner le bouton de fermeture
 
+    burger.addEventListener('click', function() {
+        menu.classList.toggle('active');
+    });
+
+    closeMenu.addEventListener('click', function() { // Écouter le clic sur le bouton de fermeture
+        menu.classList.remove('active'); // Fermer le menu
+    });
+});
 

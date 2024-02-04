@@ -108,15 +108,6 @@ function add_additional_class_on_li( $classes, $item, $args ) {
 
 add_filter( 'nav_menu_css_class', 'add_additional_class_on_li', 1, 3 );
 
-function inserer_carte() {
-	ob_start(); // Commence la capture de l'output
-	// Votre code PHP ici
-	// Par exemple, inclure votre fichier template-carte.php :
-	include(get_theme_file_path('/template-carte.php'));
-	return ob_get_clean(); // Renvoie l'output capturé et arrête la capture
-}
-add_shortcode('carte', 'inserer_carte');
-
 function my_acf_init_block_types() {
 	// Vérifier si la fonction existe et l'API des blocs est disponible.
 	if( function_exists('acf_register_block_type') ) {
@@ -134,9 +125,51 @@ function my_acf_init_block_types() {
 				'align' => false,
 			),
 		));
+
+		// Enregistrer un bloc personnalisé.
+		acf_register_block_type(array(
+			'name'              => 'page_contact',
+			'title'             => __('Bloc de contact'),
+			'description'       => __('Un bloc pour afficher les informations de contact.'),
+			'render_template' => get_template_directory() . '/blocks/page_contact.php',
+			'category'          => 'formatting',
+			'icon'              => 'email',
+			'keywords'          => array( 'custom', 'quote' ),
+			'supports'          => array(
+				'align' => false,
+			),
+		));
 	}
 }
 
 add_action('acf/init', 'my_acf_init_block_types');
+
+function deliver_mail() {
+	// Si le bouton d'envoi du formulaire est cliqué
+	if ( isset( $_POST['cf-submitted'] ) ) {
+
+		// Récupération des données du formulaire
+		$name    = sanitize_text_field( $_POST['cf-name'] );
+		$email   = sanitize_email( $_POST['cf-email'] );
+		$subject = sanitize_text_field( $_POST['cf-subject'] );
+		$message = esc_textarea( $_POST['cf-message'] );
+
+		// Le destinataire de l'email
+		$to = get_option( 'admin_email' );
+
+		$headers = "From: $name <$email>" . "\r\n";
+
+		// Envoi de l'email
+		if ( wp_mail( $to, $subject, $message, $headers ) ) {
+			echo '<div>';
+			echo '<p>Merci pour votre message, il a été envoyé.</p>';
+			echo '</div>';
+		} else {
+			echo 'Une erreur est survenue lors de l\'envoi du message.';
+		}
+	}
+}
+
+add_action( 'wp', 'deliver_mail' );
 
 ?>

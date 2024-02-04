@@ -14,6 +14,20 @@
     height: -webkit-fill-available;
 }
 
+.form-contact input {
+    border: unset;
+    border-radius: 3rem;
+    padding: 5px;
+}
+
+.form-contact textarea {
+    overflow: auto;
+    resize: vertical;
+    border: unset;
+    width: 74%;
+    border-radius: 1rem;
+}
+
 .bouton-itineraire {
     background: #6a6a6a;
     border: none;
@@ -41,6 +55,38 @@
     margin-bottom: 3rem;
 }
 
+.form-contact {
+    display: block;
+    padding-top: 4rem;
+    margin-bottom: 3rem;
+}
+
+.form-contact h3 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    border-bottom: solid #F9D70C 4px;
+    width: max-content;
+}
+
+.form-contact label {
+    display: block;
+}
+
+.form-contact input[type="submit"]{
+    background: unset;
+    border: unset;
+    color: white;
+    padding: unset;
+}
+
+.google-map {
+    padding-top: 12rem;
+}
+
+.google-map iframe {
+    width: 100%;
+}
+
 @media only screen and (max-width: 800px) {
     .home-contact iframe {
         height: 490px;
@@ -52,5 +98,9 @@
 
     .home-contact {
         text-align: center;
+    }
+
+    .google-map {
+        padding-top: 0rem;
     }
 }

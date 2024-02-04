@@ -33,10 +33,10 @@ window.addEventListener('scroll', function () {
     if (scrollPosition >= videoBottom) {
         header.classList.add('dark');
         menuLinks.forEach(function (link) {
-            link.style.color = 'black';
+            link.style.color = '#6a6a6a';
         });
         navbarLinks.forEach(function (link) {
-            link.style.color = 'black';
+            link.style.color = '#6a6a6a';
         });
     } else {
         header.classList.remove('dark');
