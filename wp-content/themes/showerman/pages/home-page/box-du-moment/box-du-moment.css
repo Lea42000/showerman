@@ -42,17 +42,32 @@
     width: 40px;
 }
 
-@media only screen and (max-width: 750px) {
-    .card-menu{
-        display: block !important;
-    }
+.card-menu .box-du-moment-img {
+    width: 100%;
+    display: block;
+    transition: opacity 0.2s ease;
+    position: absolute;
+    top: 0;
+    left: 20%;
+    right: 40%;
+}
 
-    .card-menu {
-        text-align: center;
-        padding: 4rem 0;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-    }
+.card-menu .hover-img {
+    opacity: 0;
+}
+
+.card-menu:hover .hover-img {
+    opacity: 1;
+}
+
+.card-menu:hover .default-img {
+    opacity: 0;
+}
+
+.picture-hover{
+    position: relative;
+    height: 221px;
+    width: 100%;
 }
 
 .box-du-moment {
@@ -117,6 +132,26 @@
     display: block;
 }
 
+.picture-hover .box-du-moment-img {
+    transition: opacity 0.5s ease;
+    position: absolute;
+    top: 0;
+    left: 0%;
+    right: 40%;
+}
+
+.picture-hover .hover-img {
+    opacity: 0;
+}
+
+.picture-hover:hover .hover-img {
+    opacity: 1;
+}
+
+.picture-hover:hover .default-img {
+    opacity: 0;
+}
+
 @media only screen and (max-width: 750px) {
 
     .box-moment-mobile{
@@ -156,5 +191,19 @@
         padding-bottom: 20px;
         text-align: center;
         transform: translate(10px, 60px);
+    }
+}
+
+
+@media only screen and (max-width: 750px) {
+    .card-menu{
+        display: block !important;
+    }
+
+    .card-menu {
+        text-align: center;
+        padding: 4rem 0;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
     }
 }

@@ -16,17 +16,24 @@
                             the_row(); // Configure l'itération sur la ligne suivante.
                             // Récupérez vos sous-champs par leurs noms.
                             $image = get_sub_field('image');
+	                        $image_hover = get_sub_field('image_au_survol');
                             $titre = get_sub_field('titre');
                             $texte = get_sub_field('texte');
                             $coup_de_coeur = get_sub_field('coup_de_coeur');
                             ?>
                             <div class="col-lg-4 col-xl-4 col-xs-6 mb-5" data-aos="fade-up">
                                 <?php
-                                // Affichez l'image.
-                                if ($image) {
-                                    echo '<img src="' . esc_url($image['url']) . '" alt="' . esc_attr($image['alt']) . '" />';
-                                }
-
+                               if ($image): ?>
+                                <div class="picture-hover">
+                                    <!-- Image par défaut -->
+                                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>"
+                                         class="box-du-moment-img default-img"/>
+                                    <!-- Image au survol -->
+                                    <img src="<?php echo esc_url($image_hover['url']); ?>" alt="<?php echo esc_attr($image_hover['alt']); ?>"
+                                         class="box-du-moment-img hover-img"/>
+                                </div>
+	                            <?php endif; ?>
+	                            <?php
                                 // Affichez le titre.
                                 if ($titre) {
                                     echo '<h3 class="title">' . esc_html($titre) . '</h3>';

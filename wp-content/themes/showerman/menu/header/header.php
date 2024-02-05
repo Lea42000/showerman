@@ -35,11 +35,7 @@
                 <div></div>
             </div>
         </div>
-
-
     </header>
-
-
     <section class="video-home">
         <video autoplay loop muted playsinline class="background-video">
             <source src="<?php echo get_template_directory_uri(); ?>/assets/images/video-home.mp4" type="video/mp4">
@@ -53,23 +49,4 @@
     </section>
 
 </header>
-
-<!-- Début du préchargeur
-<div id="preloader">
-    <div id="loader">
-        <div id="preloader-container">
-                <dic class="col-12">
-                    <div class="row">
-                        <div class="m-auto t-center col-6">
-                            <img src="<?php //echo get_template_directory_uri(); ?>/assets/images/shawerman-logo.png" width="170px" alt="Appeler nous">
-                        </div>
-                    </div>
-                </dic>
-            </div>
-
-        </div>
-
-    </div>
- -->
-<!-- Fin du préchargeur -->
 <div class="container-fluid p-0">

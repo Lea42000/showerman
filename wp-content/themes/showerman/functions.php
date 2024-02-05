@@ -109,10 +109,8 @@ function add_additional_class_on_li( $classes, $item, $args ) {
 add_filter( 'nav_menu_css_class', 'add_additional_class_on_li', 1, 3 );
 
 function my_acf_init_block_types() {
-	// Vérifier si la fonction existe et l'API des blocs est disponible.
 	if( function_exists('acf_register_block_type') ) {
 
-		// Enregistrer un bloc personnalisé.
 		acf_register_block_type(array(
 			'name'              => 'cards_menu',
 			'title'             => __('Card menu'),
@@ -126,7 +124,6 @@ function my_acf_init_block_types() {
 			),
 		));
 
-		// Enregistrer un bloc personnalisé.
 		acf_register_block_type(array(
 			'name'              => 'page_contact',
 			'title'             => __('Bloc de contact'),
@@ -145,27 +142,23 @@ function my_acf_init_block_types() {
 add_action('acf/init', 'my_acf_init_block_types');
 
 function deliver_mail() {
-	// Si le bouton d'envoi du formulaire est cliqué
 	if ( isset( $_POST['cf-submitted'] ) ) {
 
-		// Récupération des données du formulaire
 		$name    = sanitize_text_field( $_POST['cf-name'] );
 		$email   = sanitize_email( $_POST['cf-email'] );
 		$subject = sanitize_text_field( $_POST['cf-subject'] );
 		$message = esc_textarea( $_POST['cf-message'] );
 
-		// Le destinataire de l'email
 		$to = get_option( 'admin_email' );
 
 		$headers = "From: $name <$email>" . "\r\n";
 
-		// Envoi de l'email
 		if ( wp_mail( $to, $subject, $message, $headers ) ) {
 			echo '<div>';
-			echo '<p>Merci pour votre message, il a été envoyé.</p>';
+			echo '<p>Merci pour votre message, il a été envoyé, vous receverer un mail de confirmation prochainement.</p>';
 			echo '</div>';
 		} else {
-			echo 'Une erreur est survenue lors de l\'envoi du message.';
+			echo 'Une erreur est survenue lors de l\'envoi du message. Merci de actualiser la page.';
 		}
 	}
 }
