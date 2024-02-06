@@ -27,6 +27,7 @@ h2.wp-block-heading {
     margin: auto;
     font-size: 3.5rem;
     margin-bottom: 3rem;
+    margin-top: 3rem
 }
 
 h3 {
@@ -65,38 +66,6 @@ h3 {
     width: 100%;
 }
 
-/***
-Menu
-***/
-
-/* .menu-primary-container {
-    position: fixed;
-    width: 100%;
-    z-index: 10;
-    background: #F9D70C;
-    padding: 1rem 0;
-    -webkit-box-shadow: 5px 5px 15px 5px #A4A4A4;
-    box-shadow: 5px 5px 15px 5px #00000030;
-} */
-
-/* ul#menu-primary {
-    display: inline-flex;
-    width: 100%;
-    list-style: none;
-    padding: unset;
-    margin-bottom: 0;
-}
-
-ul#menu-primary li {
-    text-align: center;
-    margin: auto;
-}
-
-ul#menu-primary li a {
-    color: #2e2e2e;
-    font-weight: bold;
-} */
-
 .btn-call {
     position: fixed;
     background: #6a6a6a;
@@ -127,4 +96,20 @@ ul#menu-primary li a {
 
 aside.country-selector.weglot-inline.weglot-default.wg-.weglot-invert {
     display: none;
+}
+
+.header-instit {
+    position: relative;
+    height: 430px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header-instit h2 {
+    margin: auto;
+    width: max-content;
+    padding-top: 9rem;
+    border-bottom: solid 4px #efd965;
+    text-align: center;
 }

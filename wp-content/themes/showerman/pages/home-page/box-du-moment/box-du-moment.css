@@ -64,6 +64,14 @@
     opacity: 0;
 }
 
+.card-menu .picture-hover .box-du-moment-img {
+    transition: opacity 0.2s ease;
+    position: absolute;
+    top: 0;
+    left: 20%;
+    right: 40%;
+}
+
 .picture-hover{
     position: relative;
     height: 221px;
@@ -133,7 +141,7 @@
 }
 
 .picture-hover .box-du-moment-img {
-    transition: opacity 0.5s ease;
+    transition: opacity 0.2s ease;
     position: absolute;
     top: 0;
     left: 0%;
@@ -205,5 +213,19 @@
         padding: 4rem 0;
         margin-top: 2rem;
         margin-bottom: 2rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .card-menu-container .card-menu {
+        display: inline-block;
+        width: 31%; /* Réglage pour 3 vignettes par ligne */
+        margin: 1%; /* Petit espace entre les vignettes */
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .card-menu-container .card-menu {
+        display: none; /* Cache les vignettes en mode mobile pour le carrousel */
     }
 }

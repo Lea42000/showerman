@@ -136,6 +136,19 @@ function my_acf_init_block_types() {
 				'align' => false,
 			),
 		));
+
+		acf_register_block_type(array(
+			'name'              => 'bloc_header',
+			'title'             => __('Bloc de header'),
+			'description'       => __('Un bloc pour un header'),
+			'render_template' => get_template_directory() . '/blocks/header-instit.php',
+			'category'          => 'formatting',
+			'icon'              => 'email',
+			'keywords'          => array( 'custom', 'quote' ),
+			'supports'          => array(
+				'align' => false,
+			),
+		));
 	}
 }
 

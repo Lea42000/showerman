@@ -36,6 +36,8 @@
             </div>
         </div>
     </header>
+
+	<?php if (is_front_page()) { ?>
     <section class="video-home">
         <video autoplay loop muted playsinline class="background-video">
             <source src="<?php echo get_template_directory_uri(); ?>/assets/images/video-home.mp4" type="video/mp4">
@@ -47,6 +49,5 @@
             <button class="btn-book"><a href="https://usellweb.co/fr/landingpage/shawerman-lyon-3" class="color-white" target="_blank">Commander</a></button>
         </div>
     </section>
-
-</header>
+    <?php }; ?>
 <div class="container-fluid p-0">
