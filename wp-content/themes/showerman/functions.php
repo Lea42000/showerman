@@ -130,7 +130,7 @@ function my_acf_init_block_types() {
 			'description'       => __('Un bloc pour afficher les informations de contact.'),
 			'render_template' => get_template_directory() . '/blocks/page_contact.php',
 			'category'          => 'formatting',
-			'icon'              => 'email',
+			'icon'              => 'admin-comments',
 			'keywords'          => array( 'custom', 'quote' ),
 			'supports'          => array(
 				'align' => false,
@@ -143,7 +143,20 @@ function my_acf_init_block_types() {
 			'description'       => __('Un bloc pour un header'),
 			'render_template' => get_template_directory() . '/blocks/header-instit.php',
 			'category'          => 'formatting',
-			'icon'              => 'email',
+			'icon'              => 'admin-comments',
+			'keywords'          => array( 'custom', 'quote' ),
+			'supports'          => array(
+				'align' => false,
+			),
+		));
+
+		acf_register_block_type(array(
+			'name'              => 'bloc_image',
+			'title'             => __('Bloc Image'),
+			'description'       => __('Un bloc pour une image avec une animation'),
+			'render_template' => get_template_directory() . '/blocks/image-animation.php',
+			'category'          => 'formatting',
+			'icon'              => 'admin-comments',
 			'keywords'          => array( 'custom', 'quote' ),
 			'supports'          => array(
 				'align' => false,

@@ -55,6 +55,12 @@
     margin-bottom: 3rem;
 }
 
+.home-contact h2 {
+    border-bottom: solid #f3d84a 3px;
+    width: fit-content;
+    margin: auto;
+}
+
 .form-contact {
     display: block;
     padding-top: 4rem;

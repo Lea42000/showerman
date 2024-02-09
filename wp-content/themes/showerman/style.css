@@ -92,6 +92,11 @@ h3 {
         color: white;
         font-size: 2.5rem;
     }
+    .header-instit h2 {
+        width: max-content !important;
+        padding: 2rem 2rem !important;
+    }
+
 }
 
 aside.country-selector.weglot-inline.weglot-default.wg-.weglot-invert {
@@ -100,7 +105,7 @@ aside.country-selector.weglot-inline.weglot-default.wg-.weglot-invert {
 
 .header-instit {
     position: relative;
-    height: 430px;
+    height: 70vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -109,7 +114,22 @@ aside.country-selector.weglot-inline.weglot-default.wg-.weglot-invert {
 .header-instit h2 {
     margin: auto;
     width: max-content;
-    padding-top: 9rem;
     border-bottom: solid 4px #efd965;
     text-align: center;
+    background: #2d2d2da3;
+    padding: 3rem 12rem;
+    transform: translate(10px, 220px);
 }
+
+.bloc-image img {
+    width: 100%;
+    height: unset !important;
+    position: relative;
+}
+
+.bloc-image{
+    height: 495px;
+    padding: 2rem;
+    background: #f5dd65;
+}
+

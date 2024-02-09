@@ -15,12 +15,12 @@
 					<?php
 					$titre = get_field( 'titre' );
 					if ( $titre ) {
-						echo '<h2 class="pb-3 color-grey">' . esc_html( $titre ) . '</h2>';
+						echo '<h2 class=" color-grey">' . esc_html( $titre ) . '</h2>';
 					}
 
 					$horaires = get_field( 'horaires' );
 					if ( $horaires ) {
-						echo '<div class="horaires color-grey"><p>' . nl2br( ( $horaires ) ) . '</p></div>';
+						echo '<div class="horaires color-grey pt-4"><p>' . nl2br( ( $horaires ) ) . '</p></div>';
 					}
 
 					$bouton_itineraire = get_field( 'bouton_itiniraire' );

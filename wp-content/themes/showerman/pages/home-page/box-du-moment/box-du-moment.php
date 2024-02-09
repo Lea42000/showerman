@@ -69,15 +69,15 @@
 			if (have_rows('box_du_moment')) {
 				while (have_rows('box_du_moment')) {
 					the_row();
-					$image = get_sub_field('image');
+					$image_hover = get_sub_field('image_au_survol');
 					$titre = get_sub_field('titre');
 					$texte = get_sub_field('texte');
 					$coup_de_coeur = get_sub_field('coup_de_coeur');
 					$item_class = $first ? 'carousel-item active' : 'carousel-item';
 					?>
                     <div class="<?php echo $item_class; ?>">
-						<?php if ($image): ?>
-                            <img class="d-block w-100" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
+						<?php if ($image_hover): ?>
+                            <img class="d-block w-100" src="<?php echo esc_url($image_hover['url']); ?>" alt="<?php echo esc_attr($image_hover['alt']); ?>">
 						<?php endif; ?>
                         <div class="">
 							<?php if ($titre): ?>

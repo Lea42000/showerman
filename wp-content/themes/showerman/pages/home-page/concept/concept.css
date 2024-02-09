@@ -31,6 +31,26 @@
 
 .concept p {
     color: white;
+    margin-top: 2rem;
+}
+
+.concept h2 {
+    border-bottom: solid #f3d84a 3px;
+    width: fit-content;
+    margin: auto;
+}
+
+h2:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: #f3d84a;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease-in-out;
 }
 
 @media only screen and (max-width: 750px) {
