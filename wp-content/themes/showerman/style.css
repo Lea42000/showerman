@@ -92,11 +92,16 @@ h3 {
         color: white;
         font-size: 2.5rem;
     }
+
     .header-instit h2 {
         width: max-content !important;
         padding: 2rem 2rem !important;
+        transform: translate(0px, 16px) !important;
     }
 
+    .header-instit {
+        height: 20vh !important;
+    }
 }
 
 aside.country-selector.weglot-inline.weglot-default.wg-.weglot-invert {
@@ -105,7 +110,7 @@ aside.country-selector.weglot-inline.weglot-default.wg-.weglot-invert {
 
 .header-instit {
     position: relative;
-    height: 70vh;
+    height: 100vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -121,15 +126,55 @@ aside.country-selector.weglot-inline.weglot-default.wg-.weglot-invert {
     transform: translate(10px, 220px);
 }
 
-.bloc-image img {
-    width: 100%;
-    height: unset !important;
-    position: relative;
-}
-
-.bloc-image{
-    height: 495px;
-    padding: 2rem;
+.bloc-image {
     background: #f5dd65;
 }
+
+.image-base {
+    display: block;
+    width: 100%;
+}
+
+.image-hover {
+    display: none;
+    width: 100%;
+}
+
+.bloc-image {
+    text-align: center;
+    color: #6a6a6a;
+}
+
+.bloc-image:hover .image-base {
+    display: none;
+}
+
+.bloc-image:hover .image-hover {
+    display: block;
+}
+
+.bloc-image h3 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+@media (min-width: 769px) {
+    #carouselExampleIndicators {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .carousel-item {
+        display: block !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .carousel.slide.d-md-none {
+        display: none;
+    }
+}
+
+
 
